@@ -1,13 +1,21 @@
+body{
+    background-image: url("../img/playgrounds.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
 
 /*--------------------------------- PARTIE TITRE ---------------------------------*/
 
 h1{
     text-align: center;
+    padding-bottom: 30px;
 }
 /*--------------------------------- PARTIE JOUEUR 1 ---------------------------------*/
 #block1{
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
 }
 
 #block1 h2{
@@ -34,6 +42,7 @@ h1{
 #block3{
     display: flex;
     flex-direction: column;
+    padding-right: 10%;
 }
 
 #block3 h2{
@@ -63,16 +72,17 @@ h1{
     justify-content: space-between;
 }
 
-/*--------------------------------- PARTIE DEPOT ---------------------------------*/
+/*--------------------------------- PARTIE SHIFUMI ET SCORE ---------------------------------*/
 
 #block2 h2{
     text-align: center;
 }
 
+
 #shifumi {
     display: flex;
     flex-direction: row;
-    margin-top: 57%;
+    margin-top: 50%;
 }
 
 
