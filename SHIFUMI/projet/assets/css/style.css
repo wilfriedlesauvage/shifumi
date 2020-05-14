@@ -1,15 +1,19 @@
+
 body{
     background-image: url("../img/playgrounds.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    font-family: 'Indie Flower', cursive;
 }
 
 /*--------------------------------- PARTIE TITRE ---------------------------------*/
 
-h1{
-    text-align: center;
-    padding-bottom: 30px;
+#logo{
+    display: block;
+    margin : auto;
+    width: 7%;
+    height: auto;
 }
 /*--------------------------------- PARTIE JOUEUR 1 ---------------------------------*/
 #block1{
@@ -74,15 +78,31 @@ h1{
 
 /*--------------------------------- PARTIE SHIFUMI ET SCORE ---------------------------------*/
 
+#block2 h1{
+    text-align: center;
+}
+
 #block2 h2{
     text-align: center;
+}
+
+#block2 input{
+    display: block;
+    margin : auto;
+    padding: 3%;
+    font-size: larger;
+    border-radius: 10%;
+    border-style: none;
+    background-color: #47443f;
+    color: white;
+    font-family: 'Indie Flower', cursive;
 }
 
 
 #shifumi {
     display: flex;
     flex-direction: row;
-    margin-top: 50%;
+    margin-top: 30%;
 }
 
 
@@ -91,10 +111,23 @@ h1{
     height: 200px;
     border: solid;
     margin-right: 50px;
+    border-radius: 30%;
 }
 
 #shifumiordi {
     width: 200px;
     height: 200px;
     border: solid;
+    border-radius: 30%;
+}
+
+/*--------------------------------- PARTIE DESIGN PHOTO ---------------------------------*/
+
+
+#block1 img{
+    border-radius: 30%;
+}
+
+#block3 img{
+    border-radius: 30%;
 }
