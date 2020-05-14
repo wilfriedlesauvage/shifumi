@@ -7,10 +7,12 @@
         <title>Shifumi</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-     <h1>Jeu du Shifumi</h1>
+        <img src="assets/img/logo.png" alt="logo shifumi" id="logo">
+
 
         <!---------------------------PARTIE JOUEUR 1--------------------------->
         
@@ -18,7 +20,7 @@
         <div id="block1">
             <h2>JOUEUR 1</h2>
             <div id="pierrej1" class="ui-widget-content">
-            <img src="assets/img/pierrej1.png" alt="image pierre joueur 1">
+            <img src="assets/img/pierrej1.png" alt="image pierre joueur 1" data-id="pierrej1">
             </div>
 
             <div id="feuillej1">
@@ -34,11 +36,13 @@
         <div id="block2">
             
             <h1>SCORE</h1>
+            	
+            <input type="button" value="Rejouer" id="refresh" />
             
             <div id="shifumi">
                 
                 <div id="shifumij1" class="ui-widget-header">
-                    
+                   
                 </div>
                 <div id="shifumiordi">
                 </div>
