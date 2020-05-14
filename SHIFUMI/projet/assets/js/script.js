@@ -1,40 +1,55 @@
 /* -------------- Rejouer la partie ! ------------------------ */ 
-
-$('#refresh').on('click', function() {
-  location.reload();
-});
-
-
-
-var pierrej1 = $("#pierrej1").data('id');
-var feuillej1 = $("#feuille1").data('id');
-var ciseauxj1 = $("#ciseaux1").data('id');
-var shifumij1 = $("#shifumij1").data('id');
-
 $( function() {
-    $('#pierrej1').draggable({
-        revert : 'valid' // sera renvoyé à sa place s'il est déposé dans #drop
+      $('#refresh').on('click', function() {
+        location.reload();
+      });
+
+/* -------------- PARTIE JOUEUR1 ------------------------ */ 
+
+
+    var arrayJ1 = ['Pierre', 'Feuille', 'Ciseaux'];
+    var arrayOrdi = ['Pierre', 'Feuille', 'Ciseaux'];
+    var gamerChoice = null;
+    var computerChoice = null;
+    
+    
+
+
+    $('.choice').draggable({
+      revert : true,//Renvoie l'élément toujours à sa place
+      snap : '#shifumij1',//Elles sont attirées par le bloc droppable
+      snapMode: 'inner' // Permet le magnétisme sur l'interieur du block
     });
 
-    $('#pierrej1').draggable({
-        revert : 'invalid' // sera renvoyé à sa place s'il n'est pas déposé dans #drop
+    // J'ajoute un évènement mouseup à mes éléments
+    // En fonction de l'image choisi j'attribue une valeur au choix du joueur
+    $('#pierrej1').mouseup(function(){
+      arrayJ1 = 0;
+      // Je vérifie dans ma console ce qui est stocker dans la variable gamerChoice
+      console.log('Choix du joueur' + gamerChoice);
     });
-
-    $('#shifumij1').droppable({
-
-        drop : function(){
-            $("#pierrej1").data('id');
-            alert('pierre');
-        } 
-
-        if ()
-
+    $('#feuillej1').mouseup(function(){
+      arrayJ1 = 1;
+      console.log('Choix du joueur' + gamerChoice);
     });
+    $('#ciseauxj1').mouseup(function(){
+      arrayJ1 = 2;
+      console.log('Choix du joueur' + gamerChoice);
+    });
+  
+    // Je rend ma div droppable
+    $( "#shifumij1" ).droppable({
+    // Elle n'accepte que les éléments qui ont la classe answer
+    accept: '.answer',
+    // Je lui ajoute l'évènement jqueryUI drop.
+    drop : function(event, ui){ // Au moment de l'évènement droppable
+    // L'ordinateur choisi aléatoirement un choix dans le tableau définis précédemment
+    var arrayOrdi = Math.floor(Math.random() * arrayOrdi.length);
+    console.log('Choix de l\'ordinateur' + computerChoice);
+    }
+
+    
+
+
+  });
 });
-
-
-
-
-
-
-
