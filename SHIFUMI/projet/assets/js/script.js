@@ -43,17 +43,18 @@ $( function() {
       // Je lui ajoute l'évènement jqueryUI drop.
       drop : function(event, ui){ // Au moment de l'évènement droppable
       counterGames++;
+
       // L'ordinateur choisi aléatoirement un choix dans le tableau définis précédemment
       var computerChoice = Math.floor(Math.random() * arrayOrdi.length);
       console.log('Choix de l\'ordinateur' + computerChoice);
           if (computerChoice == gamerChoice){
-            alert('égalité !');
+            alert("égalité ! l\'ordinateur à selectionné : " + computerChoice);
           } else if ((gamerChoice == 0 && computerChoice == 2) || 
           (gamerChoice == 1 && computerChoice == 0) || 
           (gamerChoice == 2 && computerChoice == 1)){
             alert('Gagné !');
           } else {
-            alert('perdu !');
+            alert("perdu ! l\'ordinateur à selectionné : " + computerChoice);
           }
 
       } 
